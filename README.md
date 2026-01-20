@@ -21,3 +21,6 @@ This project predicts the effective monthly life cost using Linear Regression.
 
 ## Status
 🚧 In Progress — Dataset creation
+
+Each minute of daily commute has an estimated cost of Rs. 10 due to time, energy and transport. 
+Hence: life_cost = rent + (commute_minutes * 30 * 10) + noise
