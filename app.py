@@ -51,9 +51,9 @@ if st.checkbox("Show sample dataset"):
 
 #Optional: Show parameters
 if st.checkbox("Show parameters"):
-    st.write(intercept)
-    st.write(rent_effect)
-    st.write(commute_effect)
+    st.write("Intercept: ",intercept)
+    st.write("Rent cost: ", rent_effect)
+    st.write("Commute cost: ",commute_effect)
 
 # Footer
 st.markdown("---")
