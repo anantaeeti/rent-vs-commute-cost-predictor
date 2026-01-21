@@ -16,8 +16,8 @@ st.title("🏠 Rent vs Commute Cost Predictor")
 st.write("Estimate your effective monthly life cost based on rent and commute time.")
 
 # Sliders for user input
-rent = st.slider("Monthly Rent (₹)", min_value=8000, max_value=25000, value=15000, step=500)
-commute = st.slider("Daily Commute (minutes)", min_value=10, max_value=120, value=60, step=5)
+rent = st.slider("Monthly Rent (₹)", min_value=4000, max_value=25000, value=15000, step=500)
+commute = st.slider("Daily Commute (minutes)", min_value=5, max_value=120, value=60, step=5)
 
 # Calculate predicted life cost
 predicted_cost = intercept + rent_effect * rent + commute_effect * commute
@@ -30,10 +30,30 @@ if predicted_cost > 2 * rent:
     st.warning("⚠️ This choice might be expensive compared to rent!")
 else:
     st.success("✅ This seems like a reasonable choice!")
+#---
+w_rent = rent_effect * rent
+w_commute = commute_effect * commute
+
+threshold = 0.15 #15% difference
+diff_ratio = abs(w_rent - w_commute)/ max(w_rent, w_commute)
+if diff_ratio < threshold:
+    st.write("🎲Rent and commute contribute within a similar range to the predicted life cost.")
+elif w_rent > w_commute:
+    st.write("🏡Rent contributes nptoceably more to the predicted life cost than commute.")
+else:
+    st.write("🚕Commute contributes nptoceably more to the predicted life cost than rent.")
+
+
 
 # Optional: Show sample dataset
 if st.checkbox("Show sample dataset"):
     st.write(df.head())
+
+#Optional: Show parameters
+if st.checkbox("Show parameters"):
+    st.write(intercept)
+    st.write(rent_effect)
+    st.write(commute_effect)
 
 # Footer
 st.markdown("---")
