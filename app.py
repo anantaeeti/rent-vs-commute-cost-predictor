@@ -47,7 +47,7 @@ else:
 
 # Optional: Show sample dataset
 if st.checkbox("Show sample dataset"):
-    st.write(df.head())
+    st.write(df.head(20))
 
 #Optional: Show parameters
 if st.checkbox("Show parameters"):
