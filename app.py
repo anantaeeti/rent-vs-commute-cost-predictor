@@ -7,7 +7,7 @@ rent_effect = 1.01      # replace with your actual rent_effect
 commute_effect = 302.07     # replace with your actual commute_effect
 
 # --- Load dataset (optional, just for reference in app) ---
-df = pd.read_csv("rent_commute_data.csv")
+df = pd.read_csv("data/rent_commute_data.csv")
 
 # --- Streamlit UI ---
 st.set_page_config(page_title="🏠 Rent vs Commute Predictor", layout="centered")
