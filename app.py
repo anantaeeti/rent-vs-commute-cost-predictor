@@ -39,9 +39,9 @@ diff_ratio = abs(w_rent - w_commute)/ max(w_rent, w_commute)
 if diff_ratio < threshold:
     st.write("🎲Rent and commute contribute within a similar range to the predicted life cost.")
 elif w_rent > w_commute:
-    st.write("🏡Rent contributes nptoceably more to the predicted life cost than commute.")
+    st.write("🏡Rent contributes noticeably more to the predicted life cost than commute.")
 else:
-    st.write("🚕Commute contributes nptoceably more to the predicted life cost than rent.")
+    st.write("🚕Commute contributes noticeably more to the predicted life cost than rent.")
 
 
 
