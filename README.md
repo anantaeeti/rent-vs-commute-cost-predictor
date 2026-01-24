@@ -61,6 +61,8 @@ This indicates:
 -No systematic bias
 -Linear model is appropriate
 -Remaining error is largely due to noise
+![Rent VS Life Cost](images/rvc_comm.png)
+![Commute VS Life Cost](images/rvc_rent.png)
 
 ---
 
@@ -85,6 +87,7 @@ The app explains:
 
 
 This turns the application from a simple predictor into a decision-support tool.
+![Actual VS Predicted](images/rvs-avp.png)
 
 ---
 
