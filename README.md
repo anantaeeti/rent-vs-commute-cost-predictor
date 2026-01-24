@@ -12,7 +12,7 @@ This project focuses not only on prediction accuracy, but also on interpretabili
 🚀 Live Application
 
 🔗 Deployed App: [(Streamlit deployment link)](https://rent-vs-commute-cost-predictor-dvxsuawyyu3rhec6wc2ghy.streamlit.app/)
-![App Screenshot](images/rvc app.png)
+![App Screenshot](images/rvc-app.png)
 
 ---
 
@@ -106,8 +106,11 @@ This turns the application from a simple predictor into a decision-support tool.
 ▶️ Running the App Locally
 
 git clone https://github.com/yourusername/rent-vs-commute-cost-predictor.git
+
 cd rent-vs-commute-cost-predictor
+
 pip install -r requirements.txt
+
 streamlit run app.py
 
 ---
