@@ -7,7 +7,7 @@ rent_effect = 1.01      # replace with your actual rent_effect
 commute_effect = 302.07     # replace with your actual commute_effect
 
 # --- Load dataset (optional, just for reference in app) ---
-df = pd.read_csv("rent_commute_data.csv")
+df = pd.read_csv("data/rent_commute_data.csv")
 
 # --- Streamlit UI ---
 st.set_page_config(page_title="🏠 Rent vs Commute Predictor", layout="centered")
@@ -30,24 +30,16 @@ if predicted_cost > 2 * rent:
     st.warning("⚠️ This choice might be expensive compared to rent!")
 else:
     st.success("✅ This seems like a reasonable choice!")
-#---
-w_rent = rent_effect * rent
-w_commute = commute_effect * commute
-
-threshold = 0.15 #15% difference
-diff_ratio = abs(w_rent - w_commute)/ max(w_rent, w_commute)
-if diff_ratio < threshold:
-    st.write("🎲Rent and commute contribute within a similar range to the predicted life cost.")
-elif w_rent > w_commute:
-    st.write("🏡Rent contributes nptoceably more to the predicted life cost than commute.")
-else:
-    st.write("🚕Commute contributes nptoceably more to the predicted life cost than rent.")
-
-
 
 # Optional: Show sample dataset
 if st.checkbox("Show sample dataset"):
-    st.write(df.head())
+    st.write(df.head(20))
+
+#Optional: Show parameters
+if st.checkbox("Show parameters"):
+    st.write("Intercept: ",intercept)
+    st.write("Rent cost: ", rent_effect)
+    st.write("Commute cost: ",commute_effect)
 
 #Optional: Show parameters
 if st.checkbox("Show parameters"):
