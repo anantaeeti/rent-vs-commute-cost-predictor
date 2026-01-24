@@ -12,7 +12,7 @@ This project focuses not only on prediction accuracy, but also on interpretabili
 🚀 Live Application
 
 🔗 Deployed App: [(Streamlit deployment link)](https://rent-vs-commute-cost-predictor-dvxsuawyyu3rhec6wc2ghy.streamlit.app/)
-
+![App Screenshot](images/rvc app.png)
 
 ---
 
