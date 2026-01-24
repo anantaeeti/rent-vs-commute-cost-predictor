@@ -105,7 +105,7 @@ This turns the application from a simple predictor into a decision-support tool.
 ---
 ▶️ Running the App Locally
 
-git clone https://github.com/yourusername/rent-vs-commute-cost-predictor.git
+git clone https://github.com/anantaeeti/rent-vs-commute-cost-predictor.git
 
 cd rent-vs-commute-cost-predictor
 
