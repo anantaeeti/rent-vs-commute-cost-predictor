@@ -41,11 +41,7 @@ if st.checkbox("Show parameters"):
     st.write("Rent cost: ", rent_effect)
     st.write("Commute cost: ",commute_effect)
 
-#Optional: Show parameters
-if st.checkbox("Show parameters"):
-    st.write(intercept)
-    st.write(rent_effect)
-    st.write(commute_effect)
+
 
 # Footer
 st.markdown("---")
